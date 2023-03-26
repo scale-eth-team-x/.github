@@ -30,7 +30,19 @@ Users will able to pick any amount of plugins available on our platform and crea
 
 Creation of features are also decentralised and accessible to everyone. Developers able to create plugins with any kind of logics they can think of and list them on WalletX.
 
-## Technologies
+## Technologies & How WalletX works
+
+
+Our project comprises four main components: the Account Abstraction Wallet, the Factory Aggregator Uploader, the published contracts, and the Bundler. The Account Abstraction Wallet is a Chrome extension built with React, Redux, EthersJS, and Wagmi. Similarly, the Factory Aggregator Uploader is built with React + Vite and Wagmi. The published contracts consist of an Aggregator contract (plugin contract) written in Solidity and a demo account abstraction contract that uses the ERC-4337 account abstraction standard and zkSync built-in account abstraction.
+To initialize the wallet, the wallet extension retrieves the available factory features from the factory aggregator contract. Users can then select the features they want to include in their customized wallet. A temporary account is created by the factory, which needs to be funded to cover the deployment gas fee. Once the account has sufficient funds, it can be deployed as a smart contract wallet. The wallet can then be used with the selected features and a customized UI that corresponds to the chosen features.
+
+
+On the front end level, we used a hacky method to dynamically compose a dedicated UI configuration for the different features selected by the wallet user. The aggregator contract handles CRUD operations for the list of different factory account abstraction contracts. Through this smart contract, the wallet can obtain information on the available features published by the developer. Contributors publish the factory contract information via a dedicated web app.
+
+
+We also used a bundler that listens to UserOperations mempool submitted by EOA wallet. The bundler bundles multiple UserOperations together and sends the bundle to EntryPoint Contracts to execute the UserOperations.
+
+
 
 ## Walkthrough our Repos
 [WalletX Extension](https://github.com/scale-eth-team-x/trampoline)
