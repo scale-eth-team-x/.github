@@ -18,10 +18,12 @@ Some users may require features such as account recovery, daily transaction limi
 
 ## Problem Statement
 These limitations affect the accessibility of crypto, especially for those who require customized wallet solutions. With EOA, it is not possible to address these limitations, and even with AA wallets, each has its own functionalities that users must make choice between them or lacking flexibility of customization.
+
 ![problem](./image/problem.png)
 
 ## Our Solution
 WalletX is a plugins marketplace for AA wallet features that addresses these limitations and empowers users to have a more tailored and personalized wallet experience.
+
 ![solution](./image/solution.png)
 
 Users will able to pick any amount of plugins available on our platform and creating personalised wallet relevant to their use case.
