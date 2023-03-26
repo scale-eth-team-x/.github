@@ -26,6 +26,8 @@ Users will able to pick any amount of plugins available on our platform and crea
 
 Creation of features are also decentralised and accessible to everyone. Developers able to create plugins with any kind of logics they can think of and list them on WalletX.
 
+## Technologies
+
 ## Walkthrough our Repos
 [WalletX Extension](https://github.com/scale-eth-team-x/trampoline)
 [Contract factory UI](https://github.com/scale-eth-team-x/factory-deployer-ui)
